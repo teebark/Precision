@@ -1,0 +1,113 @@
+/*
+ Theme Name:   Precision GP Child
+ Theme URI:    https://generatepress.com
+ Description:  Default GeneratePress child theme
+ Author:       Tom Usborne
+ Author URI:   https://tomusborne.com
+ Template:     generatepress
+ Version:      0.1
+*/
+.prec-drop-shadow h4 {
+  text-shadow: 2px 2px 0 black;
+}
+.wpcf7-form p {
+	margin: 0;
+	line-height: .75em;
+}
+/* Get rid of spacing around header */
+.inside-header {
+	padding: 0;
+}
+/* Get rid of default header */
+#site-navigation {
+	display: none;
+}
+/* Space out navbar */
+#menu-main li {
+	display: inline-block;
+	padding-left: 30px;
+}
+/* Navgar text color */
+#menu-main li a {
+	color: white;
+}
+/* Use header widgets to construct new header */
+.header-widget {
+	display: grid;
+	padding: 8px 15px;
+	max-width: 100%;
+	width: 1600px;
+	grid-template-columns: 2fr 7fr 2fr 2fr 2fr;
+	grid-template-rows: 100px;
+	grid-template-areas:
+	"logo logo-text . social phone"
+	"logo navbar navbar navbar navbar";
+}
+/* Logo widget */
+.header-widget aside:nth-child(1) {
+	grid-area: logo;
+	margin-right: 10px;
+}
+/* Logo text */
+.header-widget aside:nth-child(2) {
+	grid-area: logo-text;
+	width: 170px;
+	margin: 20px 0 20px 20px;
+}
+/* Social icons widget */
+.header-widget aside:nth-child(3) {
+	grid-area: social;
+	text-align: right;
+	margin-right: 10px;
+	color: white;
+}
+/* Phone widget */
+.header-widget aside:nth-child(4) {
+	grid-area: phone;
+	margin-right: 10px;
+	color: white;
+}
+/* Navbar widget */
+.header-widget aside:nth-child(5) {
+	grid-area: navbar;
+	padding-right: 25px;
+	text-align: right;
+	color: white;
+}
+.header-widget .widget {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.header-widget p {
+	margin-bottom: 0;
+}
+/*
+.prec-home-grid .elementor-row {
+    height: 100%;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+}
+.prec-home-video .elementor-widget-wrap {
+    grid-column: 1/2;
+    grid-row: 1/3;}
+.prec-home-video img .elementor-widget-wrap {
+    object-fit: fill;
+    height: 100%;}
+.prec-home-result .elementor-widget-wrap {
+    grid-column: 2/3;
+    grid-row: 1/2;}
+.prec-home-result img .elementor-widget-wrap {
+    object-fit: fill;
+    height: 100%;}
+.prec-home-tools .elementor-widget-wrap {
+    grid-column: 3/4;
+    grid-row: 1/3;}
+.prec-home-tools img .elementor-widget-wrap {
+    object-fit: fill;
+    height: 100%;}
+.prec-home-text .elementor-widget-wrap {
+    grid-column: 2/3;
+    grid-row: 2/3;
+	height: 100%;}
+*/
+
