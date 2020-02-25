@@ -7,16 +7,44 @@
  Template:     generatepress
  Version:      0.1
 */
-.prec-drop-shadow h4 {
-  text-shadow: 2px 2px 0 black;
+/* Set up page hero items for flex */
+.page-hero {
+	position: relative;
+}
+.inside-page-hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	top: 60px;
+	right: 15vw;
+}
+.hero-title, .hero-subtitle {
+	margin: 10px 0 0 0;
+	font-size: 29px;
+	font-weight: 600;
+	color: white;
+	text-shadow: 2px 2px 0 black;
+}
+.hero-subtitle {
+	font-size: 18px;
+}
+.hero-button {
+	margin: 20px 0 0 0;
+	font-size: 18px;
+	font-weight: 600;
+	color: white;
+	padding: 5px 10px 5px 10px;
+	background-color: #2e3b7d;
+	border-radius: 8px;
 }
 .wpcf7-form p {
 	margin: 0;
 	line-height: .75em;
 }
 /* Get rid of spacing around header */
-.inside-header {
-	padding: 0;
+.separate-containers .site-main {
+	margin: 0;
 }
 /* Get rid of default header */
 #site-navigation {
@@ -80,6 +108,28 @@
 }
 .header-widget p {
 	margin-bottom: 0;
+}
+/* Mobile header */
+@media (max-width: 768px) {
+.header-widget {
+	grid-template-columns: 30% auto;
+	grid-template-rows: 100px auto;
+	grid-template-areas:
+	"logo logo-text"
+	"social phone";
+}
+ .header-widget aside:nth-child(3) {
+	justify-self: end;
+	margin-right: 0;
+	}
+/* Turn the navbar back on for mobile */
+#site-navigation {
+	display: block;
+	}
+/* Turn off nav widget */
+#menu-main {
+	display: none;
+	}
 }
 /*
 .prec-home-grid .elementor-row {
