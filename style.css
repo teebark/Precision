@@ -10,6 +10,7 @@
 /* Set up page hero items for flex */
 .page-hero {
 	position: relative;
+	margin-top: -60px;
 }
 .inside-page-hero {
 	display: flex;
@@ -38,14 +39,63 @@
 	background-color: #2e3b7d;
 	border-radius: 8px;
 }
+/* Format services offered block */
+p.services-title {
+	margin-bottom: 0;
+	padding: 10px 10px 10px 10px;
+}
+ul.services-content {
+	border: solid 1px black;
+	padding-left: 40px;
+	margin-left: 0;
+}
+.wp-block-column {
+	margin-right: 15px;
+}
+.footer-widgets {
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+.site-footer .footer-widgets-container .inside-footer-widgets {
+	margin-left: 100px;
+}
+/* Reduce spaceing between lines */
+.footer-widgets .textwidget p {
+		margin-bottom: 2px;
+}
+/* Text in widgets starting with id = text */
+aside[id^="text"] h2.widget-title {
+	color: white;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+aside[id^="wpgm"] h2.widget-title {
+	color: white;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+/* Format 3 blocks at bottom of home page */
+.home-bottom {
+	background-color: black;
+	color: white;
+	border-bottom: 1px solid gray;
+}
+.home-bottom  .wp-block-column h2 {
+	margin: 5px 20px 10px 20px;
+	font-weight: 600;
+}
+.home-bottom  .wp-block-column p {
+	margin: 5px 20px 10px 20px;
+}
 .wpcf7-form p {
 	margin: 0;
 	line-height: .75em;
 }
-/* Get rid of spacing around header */
+/* Get rid of spacing around header 
 .separate-containers .site-main {
 	margin: 0;
-}
+} */
 /* Get rid of default header */
 #site-navigation {
 	display: none;
@@ -66,7 +116,7 @@
 	max-width: 100%;
 	width: 1600px;
 	grid-template-columns: 2fr 7fr 2fr 2fr 2fr;
-	grid-template-rows: 100px;
+	grid-template-rows: 60px;
 	grid-template-areas:
 	"logo logo-text . social phone"
 	"logo navbar navbar navbar navbar";
@@ -75,6 +125,7 @@
 .header-widget aside:nth-child(1) {
 	grid-area: logo;
 	margin-right: 10px;
+	z-index: 22;
 }
 /* Logo text */
 .header-widget aside:nth-child(2) {
@@ -108,6 +159,16 @@
 }
 .header-widget p {
 	margin-bottom: 0;
+}
+/* Adjusts position of menu on mobile */
+button.menu-toggle,
+.mobile-bar-items {
+	line-height: 200px;
+	margin-top: -70px;
+}
+/* Adjust height of mobile logo */
+#sticky-navigation .navigation-branding img {
+	height: 100px;
 }
 /* Mobile header */
 @media (max-width: 768px) {
