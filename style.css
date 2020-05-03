@@ -22,13 +22,13 @@
 }
 .hero-title, .hero-subtitle {
 	margin: 10px 0 0 0;
-	font-size: 29px;
+	font-size: 2.5vw;
 	font-weight: 600;
 	color: white;
 	text-shadow: 2px 2px 0 black;
 }
 .hero-subtitle {
-	font-size: 18px;
+	font-size: 1.2vw;
 }
 .hero-button {
 	margin: 20px 0 0 0;
@@ -48,7 +48,7 @@ ul.services-content {
 	border: solid 1px black;
 	padding-left: 40px;
 	margin-left: 0;
-}
+}inl
 .wp-block-column {
 	margin-right: 15px;
 }
@@ -100,12 +100,25 @@ aside[id^="wpgm"] h2.widget-title {
 #site-navigation {
 	display: none;
 }
+/* Turn off default navbar */
+/*
+.menu-main {
+	display: none;
+}
+a.toggle-nav {
+	display: none;
+}
+*/
 /* Space out navbar */
+
+ul#menu-main {
+	display: flex;
+	justify-content: flex-end;
+}
 #menu-main li {
-	display: inline-block;
 	padding-left: 30px;
 }
-/* Navgar text color */
+/* Navbar text color */
 #menu-main li a {
 	color: white;
 }
@@ -161,11 +174,13 @@ aside[id^="wpgm"] h2.widget-title {
 	margin-bottom: 0;
 }
 /* Adjusts position of menu on mobile */
+/*
 button.menu-toggle,
 .mobile-bar-items {
 	line-height: 200px;
 	margin-top: -70px;
 }
+*/
 /* Adjust height of mobile logo */
 #sticky-navigation .navigation-branding img {
 	height: 100px;
@@ -176,21 +191,73 @@ button.menu-toggle,
 	grid-template-columns: 30% auto;
 	grid-template-rows: 100px auto;
 	grid-template-areas:
-	"logo logo-text"
-	"social phone";
+	"logo logo-text . ."
+	"social phone navbar navbar";
 }
  .header-widget aside:nth-child(3) {
 	justify-self: end;
 	margin-right: 0;
 	}
+.header-widget aside:nth-child(5) {
+	padding-right: 25px;
+	text-align: left;
+}
+/* Header padding */
+.inside-header {
+	padding: 0;
+}
+/* Adjust hert font size */
+.hero-title {
+	font-size: 4vw;
+}
+.hero-subtitle {
+	font-size: 3vw;
+}
+/*
+.menu-main {
+	display: block;
+}
+a.toggle-nav {
+    padding: 15px;
+    margin: 15px;
+    display: inline-block !important;
+    color: #8D7F68;
+    color: #fff;
+    transition: color linear 0.15s;
+}
+.toggle-nav:hover, .toggle-nav.active {
+    text-decoration: none;
+    color: #8D7F68;
+} 
+*/
 /* Turn the navbar back on for mobile */
+/*
 #site-navigation {
 	display: block;
 	}
+*/
 /* Turn off nav widget */
+/*
 #menu-main {
 	display: none;
 	}
+*/
+.page-hero {
+	margin-top: 0;
+}
+/* Mobile menu line height */
+#site-navigation .main-nav ul li a {
+    line-height: 30px;
+	}
+/* Adjust menu padding */
+#menu-main {
+	padding-left: 0;
+}
+/*
+#site-navigation button.menu-toggle {
+	height: 50px;
+	}
+*/
 }
 /*
 .prec-home-grid .elementor-row {
