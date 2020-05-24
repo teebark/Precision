@@ -48,9 +48,12 @@ ul.services-content {
 	border: solid 1px black;
 	padding-left: 40px;
 	margin-left: 0;
-}inl
+}
 .wp-block-column {
 	margin-right: 15px;
+}
+.phone-number {
+	color: white;
 }
 .footer-widgets {
 	text-align: center;
@@ -129,7 +132,7 @@ ul#menu-main {
 	max-width: 100%;
 	width: 1600px;
 	grid-template-columns: 2fr 7fr 2fr 2fr 2fr;
-	grid-template-rows: 60px;
+	grid-template-rows: 40px;
 	grid-template-areas:
 	"logo logo-text . social phone"
 	"logo navbar navbar navbar navbar";
@@ -162,16 +165,13 @@ ul#menu-main {
 /* Navbar widget */
 .header-widget aside:nth-child(5) {
 	grid-area: navbar;
-	padding-right: 25px;
+	padding: 0 10px 20px 0;
 	text-align: right;
 	color: white;
 }
 .header-widget .widget {
 	margin-bottom: 0;
 	padding-bottom: 0;
-}
-.header-widget p {
-	margin-bottom: 0;
 }
 /* Adjusts position of menu on mobile */
 /*
@@ -185,8 +185,50 @@ button.menu-toggle,
 #sticky-navigation .navigation-branding img {
 	height: 100px;
 }
+/* Place logo first on mobile sticky */
+#sticky-navigation .navigation-branding {
+	order: -1;
+}
+#sticky-navigation button.menu-toggle {
+	order: 1;
+}
+#sticky-navigation .social-icons {
+	order: 2;
+}
+#sticky-navigation .mobile-bar-items {
+	order: 3;
+}
 /* Mobile header */
 @media (max-width: 768px) {
+.header-widget aside:nth-child(3),
+.header-widget aside:nth-child(4),
+.header-widget aside:nth-child(5) {
+	display: none;
+}
+.header-widget {
+	"logo logo-text . social phone";
+}
+#masthead .widget-1 a img {
+	height: 150px;
+	width: 142px;
+}
+/* Shorten hero image */
+.page-hero {
+	padding-bottom: 0;
+}
+.main-navigation .menu-toggle {
+	-webkit-box-flex: inherit;
+		-ms-flex-positive: inherit;
+			flex-grow: inherit;
+	width: auto;
+	-webkit-box-ordinal-group: 0;
+		-ms-flex-order: -1;
+			order: -1;
+}
+.main-navigation:not(.slideout-navigation) .inside-navigation {
+	justify-content: space-between;
+	align-items: center;
+}
 .header-widget {
 	grid-template-columns: 30% auto;
 	grid-template-rows: 100px auto;
@@ -231,17 +273,13 @@ a.toggle-nav {
 } 
 */
 /* Turn the navbar back on for mobile */
-/*
 #site-navigation {
 	display: block;
-	}
-*/
+}
 /* Turn off nav widget */
-/*
 #menu-main {
 	display: none;
 	}
-*/
 .page-hero {
 	margin-top: 0;
 }
